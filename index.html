@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src=js.js></script>
   <title>Memory Game</title>
-
   <style>
-    body{
+    body {
       min-height: 100vh;
       margin: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-image: linear-gradient(90deg, rgba(240,147,199,1) 0%, rgba(66,8,38,1) 100%);
-      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      background-image: linear-gradient(90deg, rgba(240, 147, 199, 1) 0%, rgba(66, 8, 38, 1) 100%);
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
-    h1{
+    h1 {
       text-align: center;
       text-transform: uppercase;
       font-size: 2.5rem;
-      color:  rgb(164, 105, 139);
+      color: rgb(164, 105, 139);
       text-shadow: 1px 1px 2px black;
-      
+
     }
 
-    main{
+    main {
       width: 620px;
       padding: 2rem;
       box-sizing: border-box;
@@ -34,7 +35,7 @@
       box-shadow: 0px 15px 20px -10px rgba(0 0 0 / .6);
     }
 
-    .game{
+    .game {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(4, 90px);
@@ -42,16 +43,16 @@
       perspective: 500px;
     }
 
-    .card{
+    .card {
       position: relative;
-      border: 2px solid rgba(240,147,199,1);
+      border: 2px solid rgba(240, 147, 199, 1);
       border-radius: 6px;
       transform-style: preserve-3d;
       transition: transform .3s;
       box-shadow: 0 5px 7px -5px rgb(0 0 0 / .5);
     }
 
-    .card img{
+    .card img {
       border-radius: 6px;
       height: 100%;
       width: 100%;
@@ -61,7 +62,7 @@
       backface-visibility: hidden;
     }
 
-    .card-front{
+    .card-front {
       transform: rotateY(180deg);
     }
 
@@ -100,20 +101,20 @@
     main:has(#check14:focus-visible) .game .card14,
     main:has(#check15:focus-visible) .game .card15,
     main:has(#check16:focus-visible) .game .card16 {
-      outline: 2px solid  rgb(173, 102, 142);
+      outline: 2px solid rgb(173, 102, 142);
       outline-offset: 2px;
     }
 
-    .controls{
+    .controls {
       position: absolute;
       clip: rect(1px, 1px, 1px, 1px);
       width: 1px;
       overflow: hidden;
       height: 1px;
     }
-
   </style>
 </head>
+
 <body>
   <main>
     <h1>RBD<br>Memory Game</h1>
@@ -201,6 +202,7 @@
         <img src="images/frontface.jpg.jpg" alt="cardback" class="card-back">
       </label>
     </div>
-  </main>
+  </main>  
 </body>
+
 </html>
